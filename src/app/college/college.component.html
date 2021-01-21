@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="collegeImg">
+        <img src="../../assets/college_01.jpg" alt="college" style="width:100%; opacity: 0.6;">
+        <p *ngIf="collegeDet.promoted" class="topTxt">
+            <span class="ribbon">PROMOTED</span>
+        </p>
+        <p class="bottomLeftTxt">
+            <span class="tags">{{collegeDet.tags[0]}}</span>
+            <span class="tags">{{collegeDet.tags[1]}}</span>
+        </p>
+        <p class="bottomRightTxt ranking">#{{collegeDet.ranking}}</p>
+        <div class="topRightTxt txtBox">
+            <p><span class="rating">{{collegeDet.rating}}</span>/5</p>
+            <p style="margin-top: -15px;">{{collegeDet.rating_remarks}}</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col1">
+                <p>
+                    <span class="clgName">{{collegeDet.college_name}}</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star unchecked"></span>
+                </p>
+                <p>{{collegeDet.nearest_place[0]}}
+                    <span style="color: grey;">
+                        | {{collegeDet.nearest_place[1]}}
+                    </span>
+                </p>
+                <p><span class="txtBlue">93% Match:</span>
+                    <span>
+                        {{collegeDet.famous_nearest_places}}
+                    </span>
+                </p>
+                <span class="OfferTxtBox">{{collegeDet.offertext}}</span>
+            </div>
+            <div class="col2">
+                <p>
+                    <span>&#8377;{{collegeDet.original_fees}}</span>
+                    <span class="discount">{{collegeDet.discount}}</span>
+                </p>
+                <h1 class="disFees">&#8377;{{collegeDet.discounted_fees}}</h1>
+                <p style="margin: -25px 0px 30px 0px;">{{collegeDet.fees_cycle}}</p>
+                <p class="txtBlue">{{collegeDet.amenties[0]}} . {{collegeDet.amenties[1]}}</p>
+            </div>
+        </div>
+    </div>
+</div>
